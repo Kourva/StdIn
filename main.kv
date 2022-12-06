@@ -1,0 +1,59 @@
+<ActionBar>
+    pos_hint: {'top':1}
+    background_color: "#000000"
+    ActionView:
+        use_separator: True
+        ActionPrevious:
+            id: textColor
+            color: "#AAAAAA"
+            title: '[b][font=myfont]StdIn[/font][/b]'
+            with_previous: False
+            markup: True
+            app_icon: "icon.png"
+        ActionButton:
+            id: dev
+            font_name: "myfont"
+            text: 'Developer'
+            color: "#AAAAAA"
+            bold: True
+    
+
+<ScrollView>
+    id: scrlv
+    size_hint: 1, .9
+    pos_hint: {"bottom":1}
+    TextInput:
+        id: colortext
+        background_color: "#000000"
+        foreground_color: "#FFFFFF"
+        cursor_color: "#BBBBBB"
+        font_name: "RobotoMono-Regular"
+        bold: False
+        _cursor_blink: True
+        auto_indent: True
+        do_wrap: False
+        use_bubble: True
+        text: "# Start Coding...\n\n"
+        size_hint: 1, None
+
+        height: max( (len(self._lines)+1) * self.line_height, scrlv.height)
+
+<Popup>
+    title: 'Hope You Enjoy'
+    size_hint: .7, .4
+    auto_dismiss: False
+    GridLayout:
+        cols: 1
+        Label:
+            size_hint: 1,1
+            halign: 'left'
+            valign: 'middle'
+            text: '[b][color=#FF0000][font=myfont]Telegram[/font]:\n[/color]https://izolabela.t.me\n[color=#FF0000][font=myfont]Github[/font]:[/color]\nhttps://github.com/Izolabela[/b]'
+            markup: True
+            text_size: self.width, None
+        Button:
+            text: 'Close'
+            font_name: "myfont"
+            size_hint: 1, None
+            height: "40dp"
+            on_release: root.dismiss()
