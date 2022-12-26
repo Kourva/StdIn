@@ -8,7 +8,7 @@ Text font in **RobotoMono-Regular**
 > for running on linux
 + clone
 ```bash
-git clone https://github.com/Izolabela/StdIn && cd StdIn
+git clone https://github.com/Kourva/StdIn && cd StdIn
 ```
 + requirements
 ```bash
