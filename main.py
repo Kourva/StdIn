@@ -72,5 +72,4 @@ class StdInApp(App):
 StdInApp().run()
 
 
-# Developer: Izolabela
-# KowshanKabir Team
+# Developer: Kourva
